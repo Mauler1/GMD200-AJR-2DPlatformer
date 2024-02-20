@@ -10,23 +10,22 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    [SerializeField] private float xSpeed = 10f;
-    public float XSpeed => xSpeed;
-    [SerializeField] private float jumpForce = 800f;
-    [SerializeField] private float dashForce = 20f;
-    [SerializeField] private float dashTime = 0.15f;
-    [SerializeField] private float dashCooldown = 1f;
-    [SerializeField] private float groundCheckRadius = 0.1f;
-    [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private TrailRenderer dashTrail;
-    private Rigidbody2D _rb;
-    private float _xMoveInput;
-    private bool _isGrounded = true;
-    public bool IsGrounded => _isGrounded;
-    private bool _shouldJump;
-    private bool _shouldDash = true;
-    private bool _isDashing;
-    public bool IsDashing => _isDashing;
+    [SerializeField] private float xSpeed = 10f; // player speed
+    public float XSpeed => xSpeed; // speed getter - mostly for animations
+    [SerializeField] private float jumpForce = 800f; // jumping force
+    [SerializeField] private float dashForce = 20f; // dashing speed
+    [SerializeField] private float dashTime = 0.15f; // time that dashing lasts for
+    [SerializeField] private float dashCooldown = 1f; // cooldown between being able to dash
+    [SerializeField] private float groundCheckRadius = 0.1f; // radius of ground checking circle
+    [SerializeField] private LayerMask groundLayer; // ground
+    [SerializeField] private TrailRenderer dashTrail; // dash trail
+    private Rigidbody2D _rb; // player rigidbody
+    private float _xMoveInput; // the x movement input
+    private bool _isGrounded = true; // if player is grounded
+    public bool IsGrounded => _isGrounded; // grounded getter - mostly for animations
+    private bool _shouldJump; // if player should be able to jump
+    private bool _shouldDash = true; // if player should be able to dash
+    private bool _isDashing; // if player is currently dashing
 
     void Awake(){
         _rb = GetComponent<Rigidbody2D>();
@@ -38,32 +37,32 @@ public class PlayerMovement : MonoBehaviour
     {
 
         if(_isDashing){
-            return;
+            return; // if the player is currently dashing, it cannot perform any other input
         }
 
         _xMoveInput = Input.GetAxis("Horizontal") * xSpeed;
         if(Input.GetKeyDown(KeyCode.Space)){
-            _shouldJump = true;
+            _shouldJump = true; // when jump is pressed, the player should jump
         }
         if(Input.GetKeyDown(KeyCode.LeftShift) && _shouldDash == true){
-            StartCoroutine(CoDashing());
+            StartCoroutine(CoDashing()); // when the shift button is pressed AND the player should be able to dash, call the dashing coroutine
         }
     }
 
     void FixedUpdate(){
 
         if(_isDashing){
-            return;
+            return; // if the player is currently dashing, it cannot perform any other input
         }
 
-        Collider2D col = Physics2D.OverlapCircle(transform.position, groundCheckRadius, groundLayer);
-        _isGrounded = col != null;
+        Collider2D col = Physics2D.OverlapCircle(transform.position, groundCheckRadius, groundLayer); //ground checking physics!!
+        _isGrounded = col != null; //i love winebrenner tutorials
         _rb.velocity = new Vector2(_xMoveInput, _rb.velocity.y);
         if(_shouldJump){
             if(_isGrounded){
-                _rb.AddForce(Vector2.up * jumpForce);
+                _rb.AddForce(Vector2.up * jumpForce); //player can only jump when presssing the space bar and if on the ground
             }
-            _shouldJump = false;
+            _shouldJump = false; //no auto jumping allowed
         }
 
     }
@@ -71,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other){
 
         if(other.gameObject.CompareTag("MovingPlatform")){
-            transform.SetParent(other.transform, true);
+            transform.SetParent(other.transform, true); //moving platform parenting so that the player moves along with it
         }
 
     }
@@ -79,27 +78,27 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionExit2D(Collision2D other){
 
         if(other.gameObject.CompareTag("MovingPlatform")){
-            transform.SetParent(null, true);
+            transform.SetParent(null, true); // removes the player as a child from the platform
         }
 
     }
 
     private IEnumerator CoDashing(){
-        _shouldDash = false;
-        _isDashing = true;
+        _shouldDash = false; // sets the should dash boolean to false so it cannot be called again until end of dashing and cooldown
+        _isDashing = true; //currently dashing 
         float originalGravity = _rb.gravityScale;
-        _rb.gravityScale = 0;
-        _rb.velocity = new Vector2(transform.localScale.x * dashForce, 0f);
-        dashTrail.emitting = true;
+        _rb.gravityScale = 0; // player cannot fall down while dashing
+        _rb.velocity = new Vector2(transform.localScale.x * dashForce, 0f); // dash movement
+        dashTrail.emitting = true; //starts trail when dashing
         yield return new WaitForSeconds(dashTime);
-        dashTrail.emitting = false;
+        dashTrail.emitting = false; //dashing is now done, set everything back
         _rb.gravityScale = originalGravity;
         _isDashing = false;
         yield return new WaitForSeconds(dashCooldown);
-        _shouldDash = true;
+        _shouldDash = true; //after cooldown, should dash again
     }
 
-    private void OnDrawGizmos(){
+    private void OnDrawGizmos(){ //gizmos for the ground check circle because i need to see
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, groundCheckRadius);
     }

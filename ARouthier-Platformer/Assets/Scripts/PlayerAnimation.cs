@@ -24,11 +24,11 @@ public class PlayerAnimation : MonoBehaviour
         else if(!_facingRight && _rb.velocity.x > 0.1){
             Flip();
         }
-        animator.SetFloat("MoveSpeedX", Mathf.Abs(_rb.velocity.x)/playerMovement.XSpeed);
-        animator.SetBool("Grounded", playerMovement.IsGrounded);
+        animator.SetFloat("MoveSpeedX", Mathf.Abs(_rb.velocity.x)/playerMovement.XSpeed); //setting values for the animators - the positive x velocity divided by the players speed value
+        animator.SetBool("Grounded", playerMovement.IsGrounded); // is player on da ground
     }
 
-    private void Flip(){
+    private void Flip(){ //flips the player depending on the player's direction
         _facingRight = !_facingRight;
         transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
     }

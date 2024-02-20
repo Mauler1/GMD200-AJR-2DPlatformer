@@ -8,16 +8,19 @@ public class CamMovement : MonoBehaviour
     private int _screenIndex = 0;
     private Transform _currentPoint;
 
-    // Start is called before the first frame update
+    // Refactored moving platform code - camera moves to different points when called
     void Start()
     {
+        //sets a current point and moves the camera to it
         _currentPoint = camPoints[_screenIndex];
         transform.position = _currentPoint.position;
     }
 
     public void newScreen(){
+        //increases the index and sets the next point 
         _screenIndex++;
         _currentPoint = camPoints[_screenIndex];
-        transform.position = _currentPoint.position;
+        transform.position = _currentPoint.position; // sets the camera position to the current point
+        //could not use movetowards because it would offset the camera z-value and not display anything
     }
 }

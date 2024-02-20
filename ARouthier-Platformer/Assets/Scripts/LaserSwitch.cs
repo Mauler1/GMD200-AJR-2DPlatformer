@@ -7,22 +7,19 @@ public class LaserSwitch : MonoBehaviour
 
     [SerializeField] private float laserUpTime = 4f;
     [SerializeField] private float laserDownTime = 2.5f;
-    [SerializeField] private BoxCollider2D laser;
 
-    // Start is called before the first frame update
     void Start()
     {
-        laser = gameObject.GetComponent<BoxCollider2D>();
-        Hide();
+        Hide(); //starts the never ending cycle of death and rebirth
     }
 
     private void Show(){
-        gameObject.SetActive(true);
-        Invoke("Hide", laserUpTime);
+        gameObject.SetActive(true); //re-enables the laser
+        Invoke("Hide", laserUpTime); //calls the hide function after the up time is done
     }
 
     private void Hide(){
-        gameObject.SetActive(false);
-        Invoke("Show", laserDownTime);
+        gameObject.SetActive(false); //disables the laser
+        Invoke("Show", laserDownTime); //also calls the show function after the lasers down time so that even when disabled, the laser will re-enable
     }
 }

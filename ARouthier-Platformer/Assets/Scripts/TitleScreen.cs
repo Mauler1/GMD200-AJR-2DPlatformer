@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class TitleScreen : MonoBehaviour
 {
-    public void ChangeScene(){
+    public void ChangeScene(){ //load game scene on click
         SceneManager.LoadScene("GameScene");
     }
 
-    public void QuitGame(){
+    public void QuitGame(){ // quit the game
         Application.Quit();
     }
 }
