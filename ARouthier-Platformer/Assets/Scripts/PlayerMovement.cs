@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public float XSpeed => xSpeed;
     [SerializeField] private float jumpForce = 800f;
     [SerializeField] private float dashForce = 20f;
-    [SerializeField] private float dashTime = 0.2f;
+    [SerializeField] private float dashTime = 0.15f;
     [SerializeField] private float dashCooldown = 1f;
     [SerializeField] private float groundCheckRadius = 0.1f;
     [SerializeField] private LayerMask groundLayer;
@@ -90,9 +90,6 @@ public class PlayerMovement : MonoBehaviour
         float originalGravity = _rb.gravityScale;
         _rb.gravityScale = 0;
         _rb.velocity = new Vector2(transform.localScale.x * dashForce, 0f);
-        Debug.Log(dashForce);
-        Debug.Log(transform.localScale.x);
-        Debug.Log(_rb.velocity);
         dashTrail.emitting = true;
         yield return new WaitForSeconds(dashTime);
         dashTrail.emitting = false;
