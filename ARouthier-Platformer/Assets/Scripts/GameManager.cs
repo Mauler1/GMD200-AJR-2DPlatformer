@@ -25,4 +25,7 @@ public class GameManager : MonoBehaviour
         timer = time;
     }
 
+    public float getTimer(){
+        return timer;
+    }
 }
