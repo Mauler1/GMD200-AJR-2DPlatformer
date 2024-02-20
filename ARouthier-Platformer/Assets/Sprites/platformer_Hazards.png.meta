@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 41aae2fde8693f24faf0a094d398590f
+guid: e65c315b2b5d9ef48bffb17ca1e664a8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,232 +123,253 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: platformer_Player_Sheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 480
-        width: 160
-        height: 160
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e2727619210e7ec4e9b0c1fcc0cda190
-      internalID: -1138839826
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: platformer_Player_Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 480
-        width: 160
-        height: 160
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 58464b6b387c8574b9a641ab8af4937d
-      internalID: -1360342939
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: platformer_Player_Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 480
-        width: 160
-        height: 160
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 804a0e2afa926ba4e82828d7a75fbe3f
-      internalID: -2144371989
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: platformer_Player_Sheet_3
+      name: platformer_Hazards_0
       rect:
         serializedVersion: 2
         x: 0
         y: 320
         width: 160
         height: 160
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29994f868a799b24e801d2ac2476c57f
-      internalID: 227768582
+      spriteID: 5cf4d2b5f5f97fa42b7cd64b4bdacf72
+      internalID: -795502640
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platformer_Player_Sheet_4
+      name: platformer_Hazards_1
       rect:
         serializedVersion: 2
         x: 160
         y: 320
         width: 160
         height: 160
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f27994f0a1fc4f4429ce8291ab399854
-      internalID: 2120353393
+      spriteID: e5a4a4986a1731a489b7f51f9b0a8f8d
+      internalID: -1402582111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platformer_Player_Sheet_5
+      name: platformer_Hazards_2
       rect:
         serializedVersion: 2
         x: 320
-        y: 321
+        y: 320
         width: 160
         height: 160
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f60dd5268d092847a1ffcdfee6fa118
-      internalID: -1787514429
+      spriteID: 0ba7e859788c55d44821bd092eaf3868
+      internalID: 234841505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platformer_Player_Sheet_6
+      name: platformer_Hazards_3
       rect:
         serializedVersion: 2
         x: 480
         y: 320
         width: 160
         height: 160
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe735dc2ab672904999fe8716a86eb71
-      internalID: 1988772362
+      spriteID: 106d71580fea3454687d8818170d3fef
+      internalID: -1090783198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platformer_Player_Sheet_7
+      name: platformer_Hazards_4
       rect:
         serializedVersion: 2
         x: 0
         y: 160
         width: 160
         height: 160
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e71813c133cb6f448809b70811f3964
-      internalID: 1083052503
+      spriteID: 1902cb51dce211b438329f9394893089
+      internalID: -542051842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platformer_Player_Sheet_8
+      name: platformer_Hazards_5
       rect:
         serializedVersion: 2
         x: 160
         y: 160
         width: 160
         height: 160
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ef3100059484354a9db90b9d7c454e2
-      internalID: 552003514
+      spriteID: 99c34b68733c62c4ca22b64c41310c9d
+      internalID: 1429015866
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platformer_Player_Sheet_9
+      name: platformer_Hazards_6
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 160
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 195cc5fa879906b4d911bdaec44dac8f
+      internalID: 978737664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_Hazards_7
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 160
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d1d8641e7f552f42ac4c06e30a95a52
+      internalID: 604318247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_Hazards_8
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 160
         height: 160
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26e612f106c84364ea0d847a8c6409f0
-      internalID: -745846396
+      spriteID: 6f405f20b117d0c42b16a351a424ecc6
+      internalID: -1304038339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platformer_Player_Sheet_10
+      name: platformer_Hazards_9
       rect:
         serializedVersion: 2
         x: 160
         y: 0
         width: 160
         height: 160
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec26d5fa9dc4eb942be5e71647bab94d
-      internalID: -491904663
+      spriteID: 979c34735279eaf48896e8a0f10f52ea
+      internalID: -1289313161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_Hazards_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc20339a22d8f74e8f332c32e354d20
+      internalID: 1798472246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformer_Hazards_11
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af4d0599175ed740be5e122516a92b5
+      internalID: -450742754
       vertices: []
       indices: 
       edges: []
@@ -364,17 +385,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      platformer_Player_Sheet_0: -1138839826
-      platformer_Player_Sheet_1: -1360342939
-      platformer_Player_Sheet_10: -491904663
-      platformer_Player_Sheet_2: -2144371989
-      platformer_Player_Sheet_3: 227768582
-      platformer_Player_Sheet_4: 2120353393
-      platformer_Player_Sheet_5: -1787514429
-      platformer_Player_Sheet_6: 1988772362
-      platformer_Player_Sheet_7: 1083052503
-      platformer_Player_Sheet_8: 552003514
-      platformer_Player_Sheet_9: -745846396
+      platformer_Hazards_0: -795502640
+      platformer_Hazards_1: -1402582111
+      platformer_Hazards_10: 1798472246
+      platformer_Hazards_11: -450742754
+      platformer_Hazards_2: 234841505
+      platformer_Hazards_3: -1090783198
+      platformer_Hazards_4: -542051842
+      platformer_Hazards_5: 1429015866
+      platformer_Hazards_6: 978737664
+      platformer_Hazards_7: 604318247
+      platformer_Hazards_8: -1304038339
+      platformer_Hazards_9: -1289313161
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
